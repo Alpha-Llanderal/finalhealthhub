@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
 {
     $this->call(UsersTableSeeder::class);
     $this->call(AddressesTableSeeder::class);
+    $this->call(PhoneNumbersTableSeeder::class);
 }
     }
 
