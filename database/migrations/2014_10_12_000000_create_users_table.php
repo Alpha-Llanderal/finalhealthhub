@@ -12,15 +12,18 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
+            $table->increments('id');
+            $table->string('firstName');
+            $table->string('lastName');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
+            $table->date('birthDate');
+            $table->string('profilePicture')->nullable();
+            $table->boolean('isSelfPay')->default(false);
             $table->timestamps();
         });
     }
+    
 
     /**
      * Reverse the migrations.
