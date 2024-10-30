@@ -28,6 +28,10 @@ class DatabaseSeeder extends Seeder
     $this->call(UsersTableSeeder::class);
     $this->call(AddressesTableSeeder::class);
     $this->call(PhoneNumbersTableSeeder::class);
+    $this->call(InsurancesTableSeeder::class);
+    $this->call(AppointmentsTableSeeder::class);
+    $this->call(MedicalRecordsTableSeeder::class);
+    $this->call(LaboratoryTestsTableSeeder::class);
 }
     }
 
