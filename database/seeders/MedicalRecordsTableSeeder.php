@@ -17,7 +17,7 @@ class MedicalRecordsTableSeeder extends Seeder
         // Retrieve all valid user IDs
         $userIds = User::pluck('id')->toArray();
 
-        foreach (range(1, 50) as $index) {
+        foreach (range(1, 10) as $index) {
             DB::table('medical_records')->insert([
                 'user_id' => $faker->randomElement($userIds), // Ensures valid foreign key
                 'date' => $faker->dateTimeBetween('-5 years', 'now')->format('Y-m-d'),

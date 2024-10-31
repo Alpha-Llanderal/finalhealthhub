@@ -17,7 +17,7 @@ class LaboratoryTestsTableSeeder extends Seeder
         // Retrieve all valid user IDs
         $userIds = User::pluck('id')->toArray();
 
-        foreach (range(1, 50) as $index) {
+        foreach (range(1, 10) as $index) {
             DB::table('laboratory_tests')->insert([
                 'user_id' => $faker->randomElement($userIds), // Ensures valid foreign key
                 'dateUploaded' => Carbon::now()->subDays($faker->numberBetween(1, 365)),

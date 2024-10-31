@@ -17,7 +17,7 @@ class InsurancesTableSeeder extends Seeder
         // Fetch all valid user IDs
         $userIds = User::pluck('id')->toArray();
 
-        foreach (range(1, 50) as $index) {
+        foreach (range(1, 10) as $index) {
             DB::table('insurances')->insert([
                 'user_id' => $faker->randomElement($userIds), // Valid user ID
                 'provider' => $faker->company,

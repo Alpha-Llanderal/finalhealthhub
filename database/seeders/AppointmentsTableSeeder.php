@@ -17,7 +17,7 @@ class AppointmentsTableSeeder extends Seeder
         // Get an array of all valid user IDs
         $userIds = User::pluck('id')->toArray();
 
-        foreach (range(1, 50) as $index) {
+        foreach (range(1, 10) as $index) {
             DB::table('appointments')->insert([
                 'user_id' => $faker->randomElement($userIds), // Ensures valid foreign key
                 'date' => $faker->dateTimeBetween('now', '+1 year')->format('Y-m-d'),

@@ -17,7 +17,7 @@ class PhoneNumbersTableSeeder extends Seeder
         // Get an array of all existing user IDs
         $userIds = User::pluck('id')->toArray();
 
-        foreach (range(1, 50) as $index) {
+        foreach (range(1, 10) as $index) {
             DB::table('phone_numbers')->insert([
                 'user_id' => $faker->randomElement($userIds), // Ensures foreign key consistency
                 'phoneNumber' => $faker->phoneNumber,
