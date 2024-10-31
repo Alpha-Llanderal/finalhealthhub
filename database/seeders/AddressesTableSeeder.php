@@ -17,7 +17,7 @@ class AddressesTableSeeder extends Seeder
         // Get all existing user IDs
         $userIds = User::pluck('id')->toArray();
 
-        foreach (range(1, 50) as $index) {
+        foreach (range(1, 10) as $index) {
             DB::table('addresses')->insert([
                 'user_id' => $faker->randomElement($userIds), // Pick a random existing user ID
                 'address' => $faker->address,
