@@ -12,10 +12,19 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//Common Resource Routes/Naming:
+//index - Shows all date -> listings Route::get();
+//show - Show single data -> listing Route::get();
+//create - Show form to create new -> listing Route::post();
+//store - Store Data -> new listing
+//edit - Show form to edit data -> listing Route::put(); Route::patch();
+//update - Update data -> listing Route::delete();
+//destroy - Delete a data -> listing ROute::options()
 
 Route::get('/', function () {
     return view('landing');
 });
+
 
 Route::get('/register', function () {
     return view('register');
