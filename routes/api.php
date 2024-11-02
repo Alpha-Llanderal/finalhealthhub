@@ -7,6 +7,8 @@ use App\Http\Controllers\AddressController;
 use App\Http\Controllers\InsuranceController;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\PhoneNumberController;
+use App\Http\Controllers\MedicalRecordController;
+use App\Http\Controllers\LaboratoryTestController;
 
 
 
@@ -44,4 +46,12 @@ Route::put('/insurances/{insurance}', [InsuranceController::class, 'update']);
 //Appointment Controller
 Route::post('/appointments', [AppointmentController::class, 'store']);
 Route::put('/appointments/{appointment}', [AppointmentController::class, 'update']);
+
+//Medical Record Controller
+Route::post('/medical-records', [MedicalRecordController::class, 'store']);
+Route::put('/medical-records/{medicalRecord}', [MedicalRecordController::class, 'update']);
+
+//Laboratory Test Controller
+Route::post('/laboratory-tests', [LaboratoryTestController::class, 'store']);
+Route::put('/laboratory-tests/{laboratoryTest}', [LaboratoryTestController::class, 'update']);
 

@@ -8,4 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class MedicalRecord extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'date',
+        'condition',
+        'treatment'
+    ];
+
+    protected $casts = [
+        'date' => 'date'
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

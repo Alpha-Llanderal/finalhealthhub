@@ -16,6 +16,7 @@ use App\Http\Controllers\UserController;
 //Common Resource Routes/Naming:
 //index - Shows all date -> listings Route::get();
 //show - Show single data -> listing Route::get();
+
 //create - Show form to create new -> listing Route::post();
 //store - Store Data -> new listing
 //edit - Show form to edit data -> listing Route::put(); Route::patch();

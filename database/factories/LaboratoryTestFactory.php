@@ -2,22 +2,21 @@
 
 namespace Database\Factories;
 
+use App\Models\LaboratoryTest;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\LaboratoryTest>
- */
 class LaboratoryTestFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
-    public function definition(): array
+    protected $model = LaboratoryTest::class;
+
+    public function definition()
     {
         return [
-            //
+            'user_id' => User::factory(),
+            'dateUploaded' => now(),
+            'labTestName' => $this->faker->word(),
+            'fileURL' => $this->faker->url(),
         ];
     }
 }
