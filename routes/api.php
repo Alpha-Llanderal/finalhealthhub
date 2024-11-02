@@ -4,6 +4,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AddressController;
+use App\Http\Controllers\PhoneNumberController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +31,7 @@ Route::put('/users/{user}', [UserController::class, 'update']);
 //Address Controller
 Route::post('/addresses', [AddressController::class, 'store']);
 Route::put('/addresses/{address}', [AddressController::class, 'update']);
+
+//Phone Number Controller
+Route::post('/phone-numbers', [PhoneNumberController::class, 'store']);
+Route::put('/phone-numbers/{phoneNumber}', [PhoneNumberController::class, 'update']);
