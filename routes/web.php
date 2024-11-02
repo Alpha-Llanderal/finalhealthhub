@@ -42,5 +42,3 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
-
-Route::get('/users', [UserController::class, 'index']);
