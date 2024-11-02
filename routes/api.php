@@ -4,8 +4,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AddressController;
-use App\Http\Controllers\PhoneNumberController;
 use App\Http\Controllers\InsuranceController;
+use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\PhoneNumberController;
 
 
 
@@ -39,3 +40,8 @@ Route::put('/phone-numbers/{phoneNumber}', [PhoneNumberController::class, 'updat
 //Insurance Controller
 Route::post('/insurances', [InsuranceController::class, 'store']);
 Route::put('/insurances/{insurance}', [InsuranceController::class, 'update']);
+
+//Appointment Controller
+Route::post('/appointments', [AppointmentController::class, 'store']);
+Route::put('/appointments/{appointment}', [AppointmentController::class, 'update']);
+
