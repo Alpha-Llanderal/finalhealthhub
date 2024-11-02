@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,6 @@ Route::get('/', function () {
     return view('landing');
 });
 
-
 Route::get('/register', function () {
     return view('register');
 });
@@ -41,3 +41,6 @@ Route::get('/privacy-policy', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+
+Route::get('/users', [UserController::class, 'index']);
