@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\PhoneNumberController;
-
+use App\Http\Controllers\InsuranceController;
 
 
 
@@ -35,3 +35,7 @@ Route::put('/addresses/{address}', [AddressController::class, 'update']);
 //Phone Number Controller
 Route::post('/phone-numbers', [PhoneNumberController::class, 'store']);
 Route::put('/phone-numbers/{phoneNumber}', [PhoneNumberController::class, 'update']);
+
+//Insurance Controller
+Route::post('/insurances', [InsuranceController::class, 'store']);
+Route::put('/insurances/{insurance}', [InsuranceController::class, 'update']);

@@ -2,22 +2,19 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Insurance>
- */
 class InsuranceFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
-    public function definition(): array
+    public function definition()
     {
         return [
-            //
+            'user_id' => User::factory(),
+            'provider' => $this->faker->company,
+            'policyNumber' => $this->faker->unique()->numberBetween(1000000, 9999999),
+            'coverageType' => $this->faker->randomElement(['Health', 'Life', 'Dental', 'Vision']),
+            'validUntil' => $this->faker->dateTimeBetween('+1 year', '+5 years'),
         ];
     }
 }
